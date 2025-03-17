@@ -1,0 +1,22 @@
+class Point {
+  int x;
+  int y;
+
+  Point([this.x = 0, this.y = 0]); // Memberikan nilai default
+
+  void setLocation(int xValue, int yValue) {
+    this.x = xValue;
+    this.y = yValue;
+  }
+}
+
+void main(List<String> args) {
+  Point a;
+  a = Point(2); // y akan bernilai default 0
+  print('Sebelum diubah:');
+  print('Titik a terletak di koordinat (${a.x}, ${a.y})');
+
+  a.setLocation(4, 5);
+  print('\nSetelah diubah:');
+  print('Titik a terletak di koordinat (${a.x}, ${a.y})');
+}
